@@ -30,18 +30,18 @@ Don't forget to give us access to the repository by either making it public or i
 
 ## General
 
-- [ ] Running `npm start` does not start the app due to errors in the console
-- [ ] Bottom tab navigation does not display icons
-- [ ] The app is not styled - make it pretty
-- [ ] The console should not display any warning nor errors in general
+- [x] Running `npm start` does not start the app due to errors in the console
+- [x] Bottom tab navigation does not display icons
+- [-] The app is not styled - make it pretty
+- [x] The console should not display any warning nor errors in general
 
 ## Home screen (tab-home)
 
 ### Search
 
-- [ ] The search suggestions below are not being displayed correctly
+- [x] The search suggestions below are not being displayed correctly
 - [ ] Pressing on a list entry should open a screen with a movie or a TV series,
-- [ ] Sending search requests is not optimal
+- [x] Sending search requests is not optimal
 - [ ] Search result displays all TV series and movies. Add additional filters.
 
 ### Featured Movies
@@ -51,24 +51,24 @@ Don't forget to give us access to the repository by either making it public or i
 
 ### Featured Tv Series
 
-- [ ] Enable the component. It's disabled as it can crash the home screen
+- [x] Enable the component. It's disabled as it can crash the home screen
 - [ ] Pressing on TV series should open the screen with TV series details
 - [ ] The rating is not displayed correctly
 
 ## Movie and Tv Series screens (movie, tv-series)
 
-- [ ] They display nothing and should display all data about the item
+- [x] They display nothing and should display all data about the item
 - [ ] Navigating back should redirect to the correct screen
 
 ## Top rated screen (tab-top-rated)
 
-- [ ] The list should display items with ratings of >=75
-- [ ] Some list entries display incorrectly formatted values
+- [x] The list should display items with ratings of >=75
+- [x] Some list entries display incorrectly formatted values
 
 ## Favorites screen (tab-favorites)
 
-- [ ] The screen displays two headers - it should display only one
-- [ ] Implement the view
+- [x] The screen displays two headers - it should display only one
+- [x] Implement the view
 
 ## Refactoring
 
@@ -76,7 +76,7 @@ Don't forget to give us access to the repository by either making it public or i
 - [ ] There should be no visible type errors
 - [ ] The linter should not show errors
 - [ ] The linter should not show warnings
-- [ ] Some files are implemented in javascript - convert them to typescript
+- [x] Some files are implemented in javascript - convert them to typescript
 - [ ] Handle network errors gracefully
 - [ ] Write some unit tests
 - [ ] Write some integration tests
