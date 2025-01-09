@@ -1,0 +1,298 @@
+{
+  "tvSeries": [
+    {
+      "id": "1",
+      "title": "Breaking Bad",
+      "creator": "Vince Gilligan",
+      "releaseYear": 2008,
+      "genres": ["Crime", "Drama", "Thriller"],
+      "rating": 95,
+      "seasons": [
+        {
+          "seasonId": "1",
+          "releaseYear": 2008,
+          "episodes": [
+            {
+              "episodeId": "1",
+              "title": "Pilot",
+              "runtimeMinutes": 58
+            },
+            {
+              "episodeId": "2",
+              "title": "Cat's in the Bag...",
+              "runtimeMinutes": 48
+            }
+          ]
+        },
+        {
+          "seasonId": "2",
+          "releaseYear": 2009,
+          "episodes": [
+            {
+              "episodeId": "3",
+              "title": "Seven Thirty-Seven",
+              "runtimeMinutes": 47
+            },
+            {
+              "episodeId": "4",
+              "title": "Grilled",
+              "runtimeMinutes": 47
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Game of Thrones",
+      "creator": "David Benioff, D.B. Weiss",
+      "releaseYear": 2011,
+      "genres": ["Action", "Adventure", "Drama"],
+      "rating": 72,
+      "seasons": [
+        {
+          "seasonId": "3",
+          "releaseYear": 2011,
+          "episodes": [
+            {
+              "episodeId": "5",
+              "title": "Winter Is Coming",
+              "runtimeMinutes": 62
+            },
+            {
+              "episodeId": "6",
+              "title": "The Kingsroad",
+              "runtimeMinutes": 56
+            }
+          ]
+        },
+        {
+          "seasonId": "4",
+          "releaseYear": 2012,
+          "episodes": [
+            {
+              "episodeId": "7",
+              "title": "The North Remembers",
+              "runtimeMinutes": 53
+            },
+            {
+              "episodeId": "8",
+              "title": "The Night Lands",
+              "runtimeMinutes": 54
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Stranger Things",
+      "creator": "The Duffer Brothers",
+      "releaseYear": 2016,
+      "genres": ["Drama", "Fantasy", "Horror"],
+      "rating": 87,
+      "seasons": [
+        {
+          "seasonId": "5",
+          "releaseYear": 2016,
+          "episodes": [
+            {
+              "episodeId": "9",
+              "title": "Chapter One: The Vanishing of Will Byers",
+              "runtimeMinutes": 47
+            },
+            {
+              "episodeId": "10",
+              "title": "Chapter Two: The Weirdo on Maple Street",
+              "runtimeMinutes": 55
+            }
+          ]
+        },
+        {
+          "seasonId": "6",
+          "releaseYear": 2017,
+          "episodes": [
+            {
+              "episodeId": "11",
+              "title": "Chapter One: MADMAX",
+              "runtimeMinutes": 48
+            },
+            {
+              "episodeId": "12",
+              "title": "Chapter Two: Trick or Treat, Freak",
+              "runtimeMinutes": 52
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "The Office",
+      "creator": "Greg Daniels",
+      "releaseYear": 2005,
+      "genres": ["Comedy"],
+      "rating": 89,
+      "seasons": [
+        {
+          "seasonId": "7",
+          "releaseYear": 2005,
+          "episodes": [
+            {
+              "episodeId": "13",
+              "title": "Pilot",
+              "runtimeMinutes": 23
+            },
+            {
+              "episodeId": "14",
+              "title": "Diversity Day",
+              "runtimeMinutes": 22
+            }
+          ]
+        },
+        {
+          "seasonId": "8",
+          "releaseYear": 2006,
+          "episodes": [
+            {
+              "episodeId": "15",
+              "title": "The Dundies",
+              "runtimeMinutes": 21
+            },
+            {
+              "episodeId": "16",
+              "title": "Sexual Harassment",
+              "runtimeMinutes": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "The Mandalorian",
+      "creator": "Jon Favreau",
+      "releaseYear": 2019,
+      "genres": ["Action", "Adventure", "Sci-Fi"],
+      "rating": 70,
+      "seasons": [
+        {
+          "seasonId": "9",
+          "releaseYear": 2019,
+          "episodes": [
+            {
+              "episodeId": "17",
+              "title": "Chapter 1: The Mandalorian",
+              "runtimeMinutes": 39
+            },
+            {
+              "episodeId": "18",
+              "title": "Chapter 2: The Child",
+              "runtimeMinutes": 33
+            }
+          ]
+        },
+        {
+          "seasonId": "10",
+          "releaseYear": 2020,
+          "episodes": [
+            {
+              "episodeId": "19",
+              "title": "Chapter 9: The Marshal",
+              "runtimeMinutes": 50
+            },
+            {
+              "episodeId": "20",
+              "title": "Chapter 10: The Passenger",
+              "runtimeMinutes": 42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "The Crown",
+      "creator": "Peter Morgan",
+      "releaseYear": 2016,
+      "genres": ["Biography", "Drama", "History"],
+      "rating": 55,
+      "seasons": [
+        {
+          "seasonId": "11",
+          "releaseYear": 2016,
+          "episodes": [
+            {
+              "episodeId": "21",
+              "title": "Wolferton Splash",
+              "runtimeMinutes": 61
+            },
+            {
+              "episodeId": "22",
+              "title": "Hyde Park Corner",
+              "runtimeMinutes": 57
+            }
+          ]
+        },
+        {
+          "seasonId": "12",
+          "releaseYear": 2017,
+          "episodes": [
+            {
+              "episodeId": "23",
+              "title": "Misadventure",
+              "runtimeMinutes": 58
+            },
+            {
+              "episodeId": "24",
+              "title": "A Company of Men",
+              "runtimeMinutes": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "The Boys",
+      "creator": "Eric Kripke",
+      "releaseYear": 2019,
+      "genres": ["Action", "Comedy", "Crime"],
+      "rating": 24,
+      "seasons": [
+        {
+          "seasonId": "13",
+          "releaseYear": 2019,
+          "episodes": [
+            {
+              "episodeId": "25",
+              "title": "The Name of the Game",
+              "runtimeMinutes": 60
+            },
+            {
+              "episodeId": "26",
+              "title": "Cherry",
+              "runtimeMinutes": 56
+            }
+          ]
+        },
+        {
+          "seasonId": "14",
+          "releaseYear": 2020,
+          "episodes": [
+            {
+              "episodeId": "27",
+              "title": "The Big Ride",
+              "runtimeMinutes": 59
+            },
+            {
+              "episodeId": "28",
+              "title": "Proper Preparation and Planning",
+              "runtimeMinutes": 58
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
