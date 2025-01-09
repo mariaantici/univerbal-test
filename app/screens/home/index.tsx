@@ -12,7 +12,7 @@ export default function HomeScreen(): ReactNode {
       </View>
 
       <FeaturedMovies style={{ marginBottom: 40 }} />
-      {/* <FeaturedTvSeries /> */}
+      <FeaturedTvSeries />
     </View>
   );
 }

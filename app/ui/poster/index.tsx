@@ -4,6 +4,7 @@ import {
   Image,
   Pressable,
   StyleProp,
+  Text,
   ViewStyle,
 } from 'react-native';
 
@@ -30,7 +31,7 @@ export function Poster(props: PosterProps) {
           ]}
           onPress={props.onFavoritePress}
         >
-          {props.isFavorite ? '-' : '+'}
+          <Text>{props.isFavorite ? '-' : '+'}</Text>
         </Pressable>
       )}
       <Image alt={props.title} src={props.src} />
