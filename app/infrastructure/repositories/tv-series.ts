@@ -1,8 +1,15 @@
 import { createAPIUrl } from '@/utils';
+import { TVSeries } from '@/../domain/tv-series';
 
 const apiUrl = createAPIUrl();
 
-export async function findTvSeriesMatchingQuery(params) {
+export interface FindTvSeriesParams {
+  [key: string]: string | number;
+}
+
+export async function findTvSeriesMatchingQuery(
+  params: FindTvSeriesParams,
+): Promise<TVSeries[]> {
   const url = new URL('/tv-series', apiUrl);
 
   for (const [key, value] of Object.entries(params)) {
@@ -15,7 +22,9 @@ export async function findTvSeriesMatchingQuery(params) {
   return await request.json();
 }
 
-export async function getTvSeriesByIdQuery(id) {
+export async function getTvSeriesByIdQuery(
+  id: string,
+): Promise<TVSeries | undefined> {
   const url = new URL(`/tv-series/${id}`, apiUrl);
 
   const request = await fetch(url);
@@ -24,7 +33,7 @@ export async function getTvSeriesByIdQuery(id) {
   return await request.json();
 }
 
-export async function getFeaturedTvSeriesQuery() {
+export async function getFeaturedTvSeriesQuery(): Promise<TVSeries[]> {
   const url = new URL('/tv-series/recommended', apiUrl);
   console.log(url);
 
@@ -34,14 +43,13 @@ export async function getFeaturedTvSeriesQuery() {
   return await request.json();
 }
 
-export async function getTopRatedTvSeriesQuery() {
-  // TODO: implement on backend side
+export async function getTopRatedTvSeriesQuery(): Promise<TVSeries[]> {
   const url = new URL('/tv-series', apiUrl);
   const request = await fetch(url);
   if (!request.ok) return [];
 
-  const json = await request.json();
+  const json: TVSeries[] = await request.json();
 
-  // top rated has to have a rating above 75%
-  return json.filter((it) => it.rating > 60);
+  // Top rated has to have a rating above 75%
+  return json.filter((it) => it.rating > 75);
 }
