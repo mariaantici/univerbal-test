@@ -52,12 +52,11 @@ const searchStyles = StyleSheet.create({
 
   suggestions: {
     width: '100%',
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+    position: 'relative', // Change to relative
     backgroundColor: 'white',
     borderWidth: 2,
     borderColor: 'yellow',
+    marginTop: 5, // Add space below the input
   },
 
   suggestionEntry: {},
