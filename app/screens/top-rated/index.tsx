@@ -1,4 +1,3 @@
-import { List } from '@/ui/list';
 import { useAtom } from 'jotai';
 import { loadable } from 'jotai/utils';
 import { useEffect, useState, type ReactNode } from 'react';
@@ -36,13 +35,21 @@ export default function TopRatedScreen(): ReactNode {
   }
 
   if (topRatedMoviesLoadable.state === 'hasData') {
-    // Filter movies with ratings >= 75
-    const filteredMovies = topRatedMoviesLoadable.data.filter(
-      (movie) => movie.rating >= 75,
-    );
+    const filteredMovies = topRatedMoviesLoadable.data
+      .filter((movie) => movie.rating >= 75)
+      .map((movie) => ({
+        ...movie,
+        title: movie.title.trim(),
+        rating: Math.round(movie.rating),
+      }));
 
-    // Filter TV series with ratings >= 75
-    const filteredTvSeries = tvSeries.filter((series) => series.rating >= 75);
+    const filteredTvSeries = tvSeries
+      .filter((series) => series.rating >= 75)
+      .map((series) => ({
+        ...series,
+        title: series.title.trim(),
+        rating: Math.round(series.rating),
+      }));
 
     const combinedData: CombinedDataItem[] = [
       { key: 'movies-header', type: 'header', title: 'Top rated movies' },
@@ -73,12 +80,22 @@ export default function TopRatedScreen(): ReactNode {
           }
 
           if (item.type === 'movie' || item.type === 'tv-series') {
-            return <List data={[item.data]} />;
+            const displayGenres = item.data.genres.join(', ');
+            return (
+              <View style={styles.item}>
+                <Text style={styles.itemTitle}>{item.data.title}</Text>
+                <Text style={styles.itemGenres}>{displayGenres}</Text>
+                <Text style={styles.itemRating}>
+                  Rating: {item.data.rating}
+                </Text>
+              </View>
+            );
           }
 
           return null;
         }}
         contentContainerStyle={styles.root}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
       />
     );
   }
@@ -96,5 +113,27 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  item: {
+    padding: 12,
+    backgroundColor: '#f9f9f9',
+    borderRadius: 8,
+  },
+  itemTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 4,
+  },
+  itemGenres: {
+    fontSize: 14,
+    color: '#555',
+    marginBottom: 4,
+  },
+  itemRating: {
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  separator: {
+    height: 8,
   },
 });
