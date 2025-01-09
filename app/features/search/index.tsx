@@ -10,6 +10,7 @@ import {
 import { inputValue$, suggestions$ } from './state';
 import { useAtom, useAtomValue } from 'jotai';
 import { loadable } from 'jotai/utils';
+import { useDebounce } from '@/hooks/useDebounce';
 
 export type SearchProps = {
   style?: StyleProp<ViewStyle>;
@@ -18,6 +19,8 @@ export type SearchProps = {
 export function Search({ style }: SearchProps): ReactNode {
   const inputRef = useRef<TextInput>(null);
   const [inputValue, setInputValue] = useAtom(inputValue$);
+
+  const debouncedInputValue = useDebounce(inputValue || '', 300);
   const suggestions = useAtomValue(loadable(suggestions$));
 
   return (
@@ -30,12 +33,12 @@ export function Search({ style }: SearchProps): ReactNode {
         value={inputValue}
       />
 
-      {!inputValue ? null : (
+      {!debouncedInputValue ? null : (
         <View style={searchStyles.suggestions}>
           {suggestions.state !== 'hasData'
             ? null
             : suggestions.data.map((it) => (
-                <View style={searchStyles.suggestionEntry}>
+                <View style={searchStyles.suggestionEntry} key={it.id}>
                   <Text>{it.title}</Text>
                 </View>
               ))}
